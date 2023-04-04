@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import logo from "../../assets/logoII.png";
+// import logo from "../../assets/logoII.png";
 import { Link } from "react-router-dom";
 // import { toast } from "react-toastify";
 
@@ -25,8 +25,9 @@ export default function SignUp() {
   return (
     <div className="container-center">
       <div className="login">
-        <div className="login-area">
-          <img src={logo} alt="Logo do sistema de chamados" />
+      <div className="login-area">
+          <h1 style={{color: "white", padding: 30}}>Smart Parking Clients</h1>
+          {/* <img src={logo} alt="Logo do sistema de chamados" /> */}
         </div>
 
         <form onSubmit={handleSubmit}>

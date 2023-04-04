@@ -7,12 +7,21 @@ import Profile from "../pages/Profile";
 import Customers from "../pages/Custumers";
 import New from "../pages/New";
 import Erro from "../pages/Erro";
+import Home from "../pages/Home";
 
 function RoutesApp() {
   return (
     <Routes>
       <Route path="/" element={<SignIn />} />
       <Route path="/register" element={<SignUp />} />
+      <Route
+        path="/home"
+        element={
+          <Private>
+            <Home />
+          </Private>
+        }
+      />
       <Route
         path="/dashboard"
         element={

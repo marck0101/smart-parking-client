@@ -1,5 +1,5 @@
 import "./signin.css";
-import logo from "../../assets/logoII.png";
+// import logo from "../../assets/logoII.png";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/auth";
@@ -21,7 +21,8 @@ export default function SignIn() {
     <div className="container-center">
       <div className="login">
         <div className="login-area">
-          <img src={logo} alt="Logo do sistema de chamados" />
+          <h1 style={{color: "white", padding: 30}}>Smart Parking Clients</h1>
+          {/* <img src={logo} alt="Logo do sistema de chamados" /> */}
         </div>
 
         <form onSubmit={handleSignIn}>

@@ -55,7 +55,8 @@ function AuthProvider({ children }) {
         storageUser(data); // manda para o localStorage
         setLoadingAuth(false); // para o carregamento da pag.
         toast.success("Bem-vindo(a) ao sistema!");
-        navigate("/dashboard");
+        // navigate("/dashboard");
+        navigate("/home");
       })
       .catch((error) => {
         console.log("erro", error);
@@ -87,7 +88,8 @@ function AuthProvider({ children }) {
           setLoadingAuth(false);
           storageUser(data);
           toast.success("Seja bem-vindo!!");
-          navigate("/dashboard");
+          // navigate("/dashboard");
+          navigate("/home");
         });
       })
       .catch(() => {
@@ -105,47 +107,6 @@ function AuthProvider({ children }) {
     localStorage.removeItem("@ticketsPRO"); // remove infos
     setUser(null); // seta null
   }
-
-  // Cadastrar um novo user
-  //   async function signUp(email, password, name){
-  //     setLoadingAuth(true);
-
-  //     await createUserWithEmailAndPassword(auth, email, password)
-  //     .then( async (value) => {
-  //         let uid = value.user.uid
-
-  //         await setDoc(doc(db, "users", uid), {
-  //           nome: name,
-  //           avatarUrl: null
-  //         })
-  //         .then( () => {
-
-  //           let data = {
-  //             uid: uid,
-  //             nome: name,
-  //             email: value.user.email,
-  //             avatarUrl: null
-  //           };
-
-  //           setUser(data);
-  //           storageUser(data);
-  //           setLoadingAuth(false);
-  //           toast.success("Seja bem-vindo ao sistema!")
-  //           navigate("/dashboard")
-
-  //         })
-
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //       setLoadingAuth(false);
-  //     })
-
-  //   }
-
-  //   function storageUser(data){
-  //     localStorage.setItem('@ticketsPRO', JSON.stringify(data))
-  //   }
 
   return (
     <AuthContext.Provider

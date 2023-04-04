@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import avatarImg from '../../assets/avatar.png'
 import { Link } from 'react-router-dom'
-
+import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { AuthContext } from '../../contexts/auth'
 import { FiHome, FiUser, FiSettings } from 'react-icons/fi'
 import './header.css';
@@ -15,15 +15,19 @@ export default function Header(){
         <img src={user.avatarUrl === null ? avatarImg : user.avatarUrl} alt="Foto do usuario" />
       </div>
 
-      <Link to="/dashboard">
+      <Link to="/home">
         <FiHome color="#FFF" size={24} />
+        Home
+      </Link>
+      {/* <Link to="/dashboard">
+        <TfiHeadphoneAlt color="#FFF" size={24} />
         Chamados
       </Link>
 
       <Link to="/customers">
         <FiUser color="#FFF" size={24} />
         Clientes
-      </Link>
+      </Link> */}
 
       <Link to="/profile">
         <FiSettings color="#FFF" size={24} />
