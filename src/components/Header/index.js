@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useContext } from 'react'
 import avatarImg from '../../assets/avatar.png'
 import { Link } from 'react-router-dom'
