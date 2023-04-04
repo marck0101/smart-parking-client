@@ -55,9 +55,7 @@ export default function SignUp() {
             {loadingAuth ? "Carregando..." : "Cadastrar"}
           </button>
         </form>
-        <div>{name}</div>
-        <div>{email}</div>
-        <div>{password}</div>
+
         <Link to="/">Já possui uma conta? Faça login</Link>
       </div>
     </div>
