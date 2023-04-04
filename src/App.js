@@ -1,10 +1,17 @@
-import RoutesApp from "./routers/Route";
-
+import { BrowserRouter } from "react-router-dom";
+import AuthProvider from "./contexts/auth";
+import RoutesApp from "./routes";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// todos os componentes, todas as rotas são children do AthProvider
 function App() {
   return (
-    <div className="App">
-      <RoutesApp />
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <ToastContainer autoClose={3000} />
+        <RoutesApp />
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 

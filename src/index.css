@@ -1,17 +1,27 @@
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
+html, body, #root{
+  height: 100%;
 }
 
-.app {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+body{
+  font: 14px;
+  font-family: sans-serif;
+  background-color: #EFEFEF;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+button{
+  cursor: pointer;
 }
