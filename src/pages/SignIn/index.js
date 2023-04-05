@@ -22,7 +22,6 @@ export default function SignIn() {
       <div className="login">
         <div className="login-area">
           <h1 style={{color: "white", padding: 30}}>Smart Parking Clients</h1>
-          {/* <img src={logo} alt="Logo do sistema de chamados" /> */}
         </div>
 
         <form onSubmit={handleSignIn}>
@@ -33,7 +32,6 @@ export default function SignIn() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          {/* <h1>Senha</h1> */}
           <input
             type="password"
             placeholder="******"
