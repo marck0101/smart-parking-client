@@ -14,6 +14,7 @@ import {
   Select,
 } from "@mui/material";
 import { useEffect, useState } from "react";
+import DenseTable from "./tabela";
 
 export default function Home() {
   const [names, setNames] = useState([
@@ -74,6 +75,7 @@ export default function Home() {
             </Box>
           </div>
         </div>
+
         {nameSelect && (
           <div className="container">
             <Grid container>
@@ -85,12 +87,40 @@ export default function Home() {
                       <Card style={{ padding: 15 }}>
                         <br />
                         <h3>{nameSelect}</h3> <br />
-                        <Grid item>
-                          <img
-                            src="./image/estacionamento2.jpg"
-                            height="200"
-                            width="400"
-                          />
+                        <Grid
+                          container
+                          xs={12}
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          <Grid
+                            item
+                            xs={12}
+                            lg={6}
+                            style={{ marginBottom: 15 }}
+                          >
+                            <img
+                              src="./image/estacionamento2.jpg"
+                              height="300"
+                              width="600"
+                            />
+                          </Grid>
+
+                          <Grid
+                            xs={12}
+                            lg={6}
+                            style={{
+                              display: "flex",
+                              flexWrap: "wrap",
+
+                              // flexDirection: "row-reverse",
+                            }}
+                          >
+                            <DenseTable />
+                          </Grid>
                         </Grid>
                       </Card>
                     </>
@@ -99,12 +129,41 @@ export default function Home() {
                       <Card style={{ padding: 15 }}>
                         <br />
                         <h3>{nameSelect}</h3> <br />
-                        <Grid item>
-                          <img
-                            src="./image/estacionamento4.jpg"
-                            height="200"
-                            width="400"
-                          />
+                        <Grid
+                          container
+                          xs={12}
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            flexWrap: "wrap",
+                          }}
+                        >
+                          <Grid
+                            item
+                            xs={12}
+                            lg={6}
+                            style={{ marginBottom: 15 }}
+                          >
+                            <img
+                              style={{ borderRadius: 15 }}
+                              src="./image/estacionamento4.jpg"
+                              height="300"
+                              width="600"
+                            />
+                          </Grid>
+
+                          <Grid
+                            xs={12}
+                            lg={6}
+                            style={{
+                              display: "flex",
+                              flexWrap: "wrap",
+
+                              // flexDirection: "row-reverse",
+                            }}
+                          >
+                            <DenseTable />
+                          </Grid>
                         </Grid>
                         <br />
                       </Card>

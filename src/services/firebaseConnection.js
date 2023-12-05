@@ -12,6 +12,13 @@ const firebaseConfig = {
   messagingSenderId: process.env.REACT_APP_messagingSenderId,
   appId: process.env.REACT_APP_appId,
   measurementId: process.env.REACT_APP_measurementId,
+  // apiKey: "AIzaSyCHcYUAjL29sFkiYGiOmSJkFhvFjqEs-Ds",
+  // authDomain: "smart-parking-clients.firebaseapp.com",
+  // projectId: "smart-parking-clients",
+  // storageBucket: "smart-parking-clients.appspot.com",
+  // messagingSenderId: "154333522502",
+  // appId: "1:154333522502:web:6525079e7a6313053af847",
+  // measurementId: "G-6DMCRQ4PNC",
 };
 
 const firebaseApp = initializeApp(firebaseConfig); // para iniciar
